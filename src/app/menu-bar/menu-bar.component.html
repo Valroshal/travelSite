@@ -1,0 +1,56 @@
+<div style="color:'white'">
+    <div id="head" class="bar" >
+        <div class="menu">
+            <div id="menuIcon1"></div>
+            <div id="menuIcon2"></div>
+            <div id="menuIcon3"></div>   
+          
+        </div>
+        
+        <h5 style="display: inline-block; margin-left: 10px;">Menu</h5>
+        
+        <div style="display: inline-block" class="tabs">
+            <ul class="menu-list" style="margin-left: 100px">
+                <li *ngFor="let img of imgList; let i of menuList;" class="{{i}}">
+                    <img src="{{img}}" alt="@@@">
+                    
+                    {{i}}</li>
+            </ul>
+        </div>
+        
+        <div class="search-block">
+            <label for="search" style="display: block;" (click)="retToggle()">
+                <div class="search-icon" style="float: right; cursor:pointer;">
+                    <img src="assets/icons/search.png" alt="" >
+                </div>
+            </label>
+            <input type="text" class="show-search-block" *ngIf="toggle==false; else showSearch">
+            <ng-template #showSearch>
+                <div class="show-search-block"></div>
+            </ng-template>
+            
+        </div>
+        
+      
+        <hr>
+    </div>
+
+    <div class="container">
+        
+        <label for="title" style="display: block;"><h2>{{title}}</h2></label>
+        <div class="list " style=" display: flex;">
+            <div style=" display: flex;">
+                <span class="placeholder " [ngStyle]="{opacity: list.opacity}" (click)="changeStyle()">Popular</span>
+                <span class="arrow-down" (click)="changeStyle()"></span>
+            </div>
+            <ul class="list__ul" [ngStyle]="{display:list.opacity===0.55 ? 'none' : 'block'}">
+                <li *ngFor="let j of travelOptions" value="{{j}}">
+                    <a href="">{{j}}</a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <hr style="margin-top: 120px;">
+</div>
+    

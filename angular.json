@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "travelSite"
+    }
+  },
+  "defaultProject": "travelSite",
+  "cli": {
+    "analytics": "9daf9125-fc59-426f-a440-d24c767e01c6"
+  }
 }

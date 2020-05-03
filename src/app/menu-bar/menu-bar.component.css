@@ -1,0 +1,141 @@
+#head{
+    color: white;
+    opacity: 0.55; 
+    /* display: flex;
+    flex-wrap: nowrap; */
+  
+}
+
+.menu{
+    display: inline-block;
+    margin: 15px;
+    margin-left: 90px;
+    vertical-align: middle;
+}
+
+#menuIcon1 {
+    width: 21px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    padding-left: 15px;
+  }
+
+  #menuIcon2 {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    padding-left: 15px;
+  }
+  #menuIcon3 {
+    width: 16px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    padding-left: 15px;
+  }
+
+  .menu-list li{
+      display: inline-block;
+      width:15px;
+      list-style-type: none;
+      padding-left: 145px;
+      
+  }
+
+  .search-block{
+    /* display: inline-block; */
+    float: right;  
+    list-style:none;
+    padding: 19px 80px 1px 1px;
+  }
+
+  .hidden-search-block{
+    visibility:hidden;
+  }
+
+  .show-search-block{
+  visibility: visible !important;
+  }
+
+
+  hr{
+    border-color: white;
+    color: white;
+    opacity: 0.55; 
+    width: 90%;
+    text-align: center;
+  }
+
+  .container{
+      width: 90%;
+      margin: 0 auto;
+      color: white;
+  }
+
+  h2{
+    color: white;
+    opacity: 0.55;
+    transform: scaleY(0.85);
+  }
+
+  .placeholder{
+    cursor:pointer;
+    color: white;
+    font-size: 22px;
+    display: block;
+    border-bottom: 1px solid white;
+  }
+
+  .list__ul{
+    cursor:pointer;
+    text-align: left;
+    position: absolute;
+    color: white;
+    opacity: 0.55;
+    list-style-type: none;
+    margin-bottom: 10px;
+    margin-right: 70px;
+  }
+
+  .list__ul li{
+    color: white;
+    background-color: none;
+    font-size: 22px;
+    margin-right: 150px;
+    text-align: start;
+  }
+
+  .list{
+    
+    display: inline-block;
+    /* border-bottom: 1px solid #e5e5e5;   */
+    padding: 10px;
+    background-color: none;
+    font-size: 22px;
+    
+  }
+
+  a{
+    color: white;
+    opacity: 0.85;
+  }
+
+  a:hover {
+    color: white;
+    opacity: 1;
+    font-weight: bolder;
+  }
+
+  .arrow-down{
+    cursor:pointer;
+    width: 0;
+    height: 0;
+    opacity: 0.55;
+    margin-left: 76px;
+    padding-top: 11px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+  }
