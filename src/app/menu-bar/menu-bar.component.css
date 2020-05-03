@@ -95,8 +95,9 @@
     color: white;
     opacity: 0.55;
     list-style-type: none;
-    margin-bottom: 10px;
-    margin-right: 70px;
+    padding-left: 0;
+    top:0;
+    width: 80%;
   }
 
   .list__ul li{
@@ -105,6 +106,7 @@
     font-size: 22px;
     margin-right: 150px;
     text-align: start;
+    
   }
 
   .list{
@@ -133,7 +135,7 @@
     width: 0;
     height: 0;
     opacity: 0.55;
-    margin-left: 76px;
+    margin-left: 86px;
     padding-top: 11px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;

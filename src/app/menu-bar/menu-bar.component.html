@@ -38,8 +38,10 @@
     <div class="container">
         
         <label for="title" style="display: block;"><h2>{{title}}</h2></label>
-        <div class="list " style=" display: flex;">
-            <div style=" display: flex;">
+        <!-- <div class="list " style=" display: flex;"> -->
+        <div class="list " style="position:relative;">
+            <!-- <div style=" display: flex;"> -->
+            <div style="position:absolute; top:0">
                 <span class="placeholder " [ngStyle]="{opacity: list.opacity}" (click)="changeStyle()">Popular</span>
                 <span class="arrow-down" (click)="changeStyle()"></span>
             </div>
