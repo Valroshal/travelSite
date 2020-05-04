@@ -7,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
+listItem = [{
+  imgList: 'assets/icons/travels.png',
+  menuList: 'travelling'
+},{
+  imgList: 'assets/icons/explore.png',
+  menuList: 'explore'
+},{
+  imgList: 'assets/icons/saved.png',
+  menuList: 'saved'
+},{
+  imgList: 'assets/icons/profile.png',
+  menuList: 'profile'
+}];
 
-
-  imgList = ['assets/icons/travels.png','assets/icons/explore.png','assets/icons/saved.png','assets/icons/profile.png'];
-
+   imgList = ['assets/icons/travels.png','assets/icons/explore.png','assets/icons/saved.png','assets/icons/profile.png'];
+  // imgList = ['icons/travels.png','icons/explore.png','icons/saved.png','icons/profile.png'];
   menuList = ['travelling','explore','saved','profile'];
 
   title = "Pick a category for your next adventure"

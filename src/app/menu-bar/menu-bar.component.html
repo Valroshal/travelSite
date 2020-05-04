@@ -1,5 +1,5 @@
 <div style="color:'white'">
-    <div id="head" class="bar" >
+    <div id="head" class="bar">
         <div class="menu">
             <div id="menuIcon1"></div>
             <div id="menuIcon2"></div>
@@ -10,11 +10,12 @@
         <h5 style="display: inline-block; margin-left: 10px;">Menu</h5>
         
         <div style="display: inline-block" class="tabs">
+            <!-- <div style="display: flex; align-items: center;" class="tabs"> -->
             <ul class="menu-list" style="margin-left: 100px">
-                <li *ngFor="let img of imgList; let i of menuList;" class="{{i}}">
-                    <img src="{{img}}" alt="@@@">
-                    
-                    {{i}}</li>
+                <li *ngFor="let i of listItem;" class="{{i}}">                     
+                    <img src='{{i.imgList}}' alt="@@@">                     
+                    <a href="">{{i.menuList}}</a>
+                </li>
             </ul>
         </div>
         
