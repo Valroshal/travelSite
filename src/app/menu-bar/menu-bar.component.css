@@ -1,15 +1,13 @@
 #head{
     color: white;
     opacity: 0.55; 
-    /* display: flex;
-    flex-wrap: nowrap; */
-  
 }
 
 .menu{
     display: inline-block;
     margin: 15px;
     margin-left: 90px;
+    margin-top: 2px;
     vertical-align: middle;
 }
 
@@ -36,24 +34,36 @@
     padding-left: 15px;
   }
 
+  .tabs{
+    display: inline-block;
+    width: 100%;
+    max-width: 970px;
+    margin-left: 90px;
+  }
+
+
   .menu-list{
     margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .menu-list li{
-      display: inline-block;
-      width:15px;
       list-style-type: none;
-      padding-left: 145px;
-     
-      
+      margin-left: 60px;   
+      height: 100px;
+      width: 125px;   
+  }
+
+  .menu-list li:hover{
+      border-bottom: 2px solid white;  
   }
 
   .search-block{
-    /* display: inline-block; */
-    float: right;  
-    list-style:none;
-    padding: 19px 80px 1px 1px;
+    display: inline-flex;
+    padding-left: 200px;
+    padding-top: 55px;
+    width: 550px;
   }
 
   .hidden-search-block{
@@ -97,12 +107,14 @@
     cursor:pointer;
     text-align: left;
     position: absolute;
+    display:flex;
+    flex-direction: column;
     color: white;
     opacity: 0.55;
     list-style-type: none;
     padding-left: 0;
-    top:0;
-    width: 80%;
+    top:10px;
+    width: 60%;
   }
 
   .list__ul li{
@@ -111,17 +123,16 @@
     font-size: 22px;
     margin-right: 150px;
     text-align: start;
-    
+    display: flex;
+    flex-direction: column;
+    width: 80%;
   }
 
-  .list{
-    
+  .list{  
     display: inline-block;
-    /* border-bottom: 1px solid #e5e5e5;   */
     padding: 10px;
     background-color: none;
-    font-size: 22px;
-    
+    font-size: 22px;  
   }
 
   a{
@@ -133,6 +144,7 @@
     color: white;
     opacity: 1;
     font-weight: bolder;
+    text-decoration: none;
   }
 
   .arrow-down{
@@ -140,9 +152,32 @@
     width: 0;
     height: 0;
     opacity: 0.55;
-    margin-left: 86px;
+    margin-left: 16px;
     padding-top: 11px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-top: 8px solid white;
+  }
+
+  .button{
+    background-color:white;
+    border: none;
+    color: rgba(253, 40, 86, 0.924);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    width:90px;
+    border-radius: 20px;
+
+  }
+
+  .arrow {
+    border: solid rgba(253, 40, 86, 0.924);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-bottom: 2px;
   }

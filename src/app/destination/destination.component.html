@@ -1,0 +1,34 @@
+<!-- <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> 
+</head> -->
+<body>
+    <div class="container">
+        <div class="image" style="height: 180px; width: 220px; padding-top: 15px; text-align: center;">
+            <img src="{{city.img}}" alt="" style="height: 100%; width: 100%; border-radius: 10px; vertical-align: middle;">   
+        </div>
+        <div style="margin-left: 15px; margin-top: 10px;">
+            <h4 style="margin: 0 auto">{{city.name}}</h4>
+            <div style="display: inline-flex; width: 220px; align-items:center; height: 20px;">
+                <span>{{city.amount}}</span>
+                <span style='font-size:25px; color: black; margin-left: 10px; '>&#8226;</span>
+                <span style="margin-left: 15px;">{{city.km}}</span>
+            </div>
+            <div style="display: inline-flex; align-items: inherit; margin-top: 20px;">
+                <span style="width:30px">
+                    <i class="wi-day-sunny" style="font-family: 'weathericons';"></i>
+                </span>
+                <div style="display: inline-flex; flex-direction:column;">
+                    <span style="font-size: 16px; width:30px">{{city.celsius}} &deg;</span>
+                    <span style="font-size: 14px; width:30px">{{city.weather}}</span>
+                </div>
+                <div class="likes">
+                    <i class="fa fa-heart-o">4k</i>
+                    <i class='far fa-comment' style="font: normal normal normal 14px/1 FontAwesome;"> 400</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-content></ng-content>
+</body>

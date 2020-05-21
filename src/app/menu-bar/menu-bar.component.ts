@@ -21,9 +21,9 @@ listItem = [{
   menuList: 'profile'
 }];
 
-   imgList = ['assets/icons/travels.png','assets/icons/explore.png','assets/icons/saved.png','assets/icons/profile.png'];
-  // imgList = ['icons/travels.png','icons/explore.png','icons/saved.png','icons/profile.png'];
-  menuList = ['travelling','explore','saved','profile'];
+  //  imgList = ['assets/icons/travels.png','assets/icons/explore.png','assets/icons/saved.png','assets/icons/profile.png'];
+  // // imgList = ['icons/travels.png','icons/explore.png','icons/saved.png','icons/profile.png'];
+  // menuList = ['travelling','explore','saved','profile'];
 
   title = "Pick a category for your next adventure"
 
