@@ -1,9 +1,11 @@
 <header>
   <app-menu-bar></app-menu-bar>
-  <app-destination
-    *ngFor="let c of cities"
-    [city] ="c"
-    style="display: flex;">
-  </app-destination>
+  <div class="container">
+    <app-destination
+      *ngFor="let c of cities"
+      [city] ="c"
+      style="display: inline-flex; margin: 15px">
+    </app-destination>
+  </div>
   <!-- hdhdg -->
 </header>

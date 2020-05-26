@@ -19,14 +19,14 @@
     padding-left: 15px;
   }
 
-  #menuIcon2 {
+#menuIcon2 {
     width: 25px;
     height: 3px;
     background-color: white;
     margin: 4px 0;
     padding-left: 15px;
   }
-  #menuIcon3 {
+#menuIcon3 {
     width: 16px;
     height: 3px;
     background-color: white;
@@ -103,7 +103,7 @@
     border-bottom: 1px solid white;
   }
 
-  .list__ul{
+  #open_list.list__ul{
     cursor:pointer;
     text-align: left;
     position: absolute;
@@ -117,7 +117,7 @@
     width: 60%;
   }
 
-  .list__ul li{
+  #open_list.list__ul li{
     color: white;
     background-color: none;
     font-size: 22px;
