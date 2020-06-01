@@ -15,7 +15,7 @@ export class DestinationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.infoRef.nativeElement);
+    // console.log(this.infoRef.nativeElement);
   }
   // nuzhno sdelat' interface
   // city = {
