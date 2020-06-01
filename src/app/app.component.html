@@ -1,11 +1,20 @@
 <header>
   <app-menu-bar></app-menu-bar>
   <div class="container">
-    <app-destination
-      *ngFor="let c of cities"
-      [city] ="c"
-      style="display: inline-flex; margin: 15px">
-    </app-destination>
+    <!-- <div class="scrolling"> -->
+      <app-destination 
+        *ngFor="let c of cities"
+        [city] ="c"
+        style="display: inline-flex; margin: 15px; 
+          width: 310px;
+          
+          
+          /*height: 280px;
+           transform: rotate(90deg);*/
+          transform-origin: right top;  
+          ">
+      </app-destination>
+    <!-- </div> -->
   </div>
-  <!-- hdhdg -->
+  
 </header>
