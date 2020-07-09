@@ -1,28 +1,11 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <header>
-  <app-menu-bar></app-menu-bar>
-<<<<<<< HEAD
-  <app-destination
-    *ngFor="let c of cities"
-    [city] ="c"
-    style="display: inline-flex; margin: 15px">
-  </app-destination>
-=======
-  <div class="container">
-    <!-- <div class="scrolling"> -->
-      <app-destination 
-        *ngFor="let c of cities"
-        [city] ="c"
-        style="display: inline-flex; margin: 15px; 
-          width: 310px;
-          
-          
-          /*height: 280px;
-           transform: rotate(90deg);*/
-          transform-origin: right top;  
-          ">
-      </app-destination>
-    <!-- </div> -->
-  </div>
->>>>>>> 22f206192ce7ab58fcf30ac05950015dd1c9aa41
-  
+    <app-menu-bar></app-menu-bar>
+    <div class="container">
+        <div class="scrolling" [ngStyle]="{width: scrollWidth}">
+            <app-destination *ngFor="let c of cities" [city]="c" style="display: inline-flex; margin: 15px; width: 310px;">
+            </app-destination>
+        </div>
+    </div>
+
 </header>

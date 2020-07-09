@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+// import {RouterModule} from '@angular/router';
+// import { AllCitiesComponent } from '../all-cities/all-cities.component';
+
+// const routes=[
+//   {
+//   path:'item', component:AllCitiesComponent
+// }]
 
 @Component({
   selector: 'app-menu-bar',
@@ -44,7 +51,6 @@ listItem = [{
   changeStyle(){
     if(this.list.opacity == 0.55)
       {
-        // this.display = 'inline-block';
         this.list.opacity = 0;
       }
     else
