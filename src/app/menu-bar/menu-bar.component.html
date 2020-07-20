@@ -20,9 +20,9 @@
                     <!------------------------------- working on it -->
                     <div class="list " style="position:relative;">
                         <div style=" display: flex; align-items: flex-end;">
-                            <span class="placeholder2" style="display: flex; margin-left: 10px; margin-bottom: 15px; font-size: 160%; max-width: 100%;" (click)="changeStyle()">Menu</span>
+                            <span class="placeholder2" style="display: flex; margin-left: 10px; margin-bottom: 15px; font-size: 160%; max-width: 100%;" (click)="changeStyle(list1)">Menu</span>
                         </div>
-                        <ul id="open_list" class="list__ul" [ngStyle]="{display:list.opacity===0.55 ? 'none' : 'flex'}">
+                        <ul id="open_list" class="list__ul" [ngStyle]="{display:list1.opacity===0.55 ? 'none' : 'flex'}">
                             <li>About</li>
                             <li>Contacts</li>
                         </ul>
@@ -59,10 +59,10 @@
             <label for="title" style="display: block;"><h2>{{title}}</h2></label>
             <div class="list " style="position:relative;">
                 <div style=" display: flex; align-items: flex-end;">
-                    <span class="placeholder " [ngStyle]="{opacity: list.opacity}" (click)="changeStyle()">Popular</span>
-                    <span class="arrow-down" (click)="changeStyle()"></span>
+                    <span class="placeholder " [ngStyle]="{opacity: list2.opacity}" (click)="changeStyle(list2)">Popular</span>
+                    <span class="arrow-down" (click)="changeStyle(list2)"></span>
                 </div>
-                <ul id="open_list" class="list__ul" [ngStyle]="{display:list.opacity===0.55 ? 'none' : 'flex'}">
+                <ul id="open_list" class="list__ul" [ngStyle]="{display:list2.opacity===0.55 ? 'none' : 'flex'}">
                     <li *ngFor="let j of travelOptions" value="{{j}}">
                         <a href="">{{j}}</a></li>
                 </ul>

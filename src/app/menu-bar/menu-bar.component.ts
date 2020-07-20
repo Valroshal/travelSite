@@ -44,19 +44,22 @@ listItem = [{
   }
 
   //list with dropdown options
-  list = {
+  list1 = {
+    opacity : 0.55
+  };
+  list2 = {
     opacity : 0.55
   };
    
-  changeStyle(){
-    if(this.list.opacity == 0.55)
+  changeStyle(list){
+    if(list.opacity == 0.55)
       {
-        this.list.opacity = 0;
+        list.opacity = 0;
       }
     else
-      this.list.opacity = 0.55;
+      list.opacity = 0.55;
      
-    console.log(this.list.opacity);    
+    console.log(list.opacity);    
   }
 
   constructor() { }
