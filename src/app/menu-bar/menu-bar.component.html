@@ -4,27 +4,27 @@
 </head>
 
 <body>
-
+    
     <!-- menu and icon -->
     <div id="menu-block" style="color:'white'">
         <div id="head" class="bar  container">
             <!-- list of menu on the head of the page with isons -->
             <div class="tabs">
-                <div style="display: flex; margin-top:15px">
-                    <div class="menu-icon">
+                <div>
+                    <div class="menu-icon" (click)="changeStyle(list2)" style="cursor: pointer;">
                         <div id="menuIcon1"></div>
                         <div id="menuIcon2"></div>
                         <div id="menuIcon3"></div>
                     </div>
 
-                    <!------------------------------- working on it -->
                     <div class="list " style="position:relative;">
                         <div style=" display: flex; align-items: flex-end;">
-                            <span class="placeholder2" style="display: flex; margin-left: 10px; margin-bottom: 15px; font-size: 160%; max-width: 100%;" (click)="changeStyle(list1)">Menu</span>
+                            <span class="placeholder2" (click)="changeStyle(list2)">Menu</span>
                         </div>
-                        <ul id="open_list" class="list__ul" [ngStyle]="{display:list1.opacity===0.55 ? 'none' : 'flex'}">
-                            <li>About</li>
-                            <li>Contacts</li>
+                        <ul id="open_list" class="list__ul2" [ngStyle]="{display:list2.opacity===0.55 ? 'none' : 'flex'}">
+                            <a routerLink="/about" routerLinkActive="active">About</a>
+                            <a routerLink="">Contacts</a>
+                            <a routerLink="">Home</a>
                         </ul>
                     </div>
 
@@ -50,6 +50,7 @@
                         <div class="hidden-search-block"></div>
                     </ng-template>
                 </div>
+
             </div>
             <hr style="margin-top: -17px;">
         </div>
@@ -59,10 +60,10 @@
             <label for="title" style="display: block;"><h2>{{title}}</h2></label>
             <div class="list " style="position:relative;">
                 <div style=" display: flex; align-items: flex-end;">
-                    <span class="placeholder " [ngStyle]="{opacity: list2.opacity}" (click)="changeStyle(list2)">Popular</span>
-                    <span class="arrow-down" (click)="changeStyle(list2)"></span>
+                    <span class="placeholder " [ngStyle]="{opacity: list1.opacity}" (click)="changeStyle(list1)">Popular</span>
+                    <span class="arrow-down" (click)="changeStyle(list1)"></span>
                 </div>
-                <ul id="open_list" class="list__ul" [ngStyle]="{display:list2.opacity===0.55 ? 'none' : 'flex'}">
+                <ul id="open_list" class="list__ul" [ngStyle]="{display:list1.opacity===0.55 ? 'none' : 'flex'}">
                     <li *ngFor="let j of travelOptions" value="{{j}}">
                         <a href="">{{j}}</a></li>
                 </ul>
@@ -85,4 +86,11 @@
         </div>
 
     </div>
+
+    <router-outlet></router-outlet>
 </body>
+<!-- What I want to change: 
+ 1. search icon open the wide field
+ 2. the height of the page opens scroll in the little desktop
+ 3. link to about and contacts pages
+ 4. link in see all to another page-->

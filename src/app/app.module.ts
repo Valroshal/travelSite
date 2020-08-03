@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { DestinationComponent } from './destination/destination.component';
 import { AllCitiesComponent } from './all-cities/all-cities.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { AllCitiesComponent } from './all-cities/all-cities.component';
     AppComponent,
     MenuBarComponent,
     DestinationComponent,
-    AllCitiesComponent
+    AllCitiesComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -74,6 +74,16 @@ h2 {
     border-bottom: 1px solid white;
 }
 
+.placeholder2 {
+    cursor: pointer;
+    color: white;
+    font-size: 22px;
+    display: flex;
+
+    font-size: 120%;
+
+}
+
 #open_list.list__ul {
     cursor: pointer;
     text-align: left;
@@ -88,6 +98,19 @@ h2 {
     width: 60%;
 }
 
+#open_list.list__ul2 {
+    cursor: pointer;
+    text-align: left;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    opacity: 0.55;
+    list-style-type: none;
+    padding-left: 0;
+    width: 60%;
+}
+
 #open_list.list__ul li {
     color: white;
     background-color: none;
@@ -97,6 +120,29 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 80%;
+}
+
+#open_list.list__ul2 li {
+    color: white;
+    background-color: none;
+    font-size: 22px;
+    margin-right: 150px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#open_list.list__ul2 a {
+    color: white;
+    background-color: none;
+    font-size: 22px;
+    margin-right: 150px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
 }
 
 .list {

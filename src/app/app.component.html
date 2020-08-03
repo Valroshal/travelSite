@@ -3,11 +3,13 @@
 </head>
 <body>
     <app-menu-bar></app-menu-bar>
-    <div class="container">
-        <div class="scrolling" [ngStyle]="{width: scrollWidth}">
-            <app-destination *ngFor="let c of cities" [city]="c" style="display: inline-flex; margin: 15px; width: 310px;">
-            </app-destination>
+    
+        <div class="container">
+            <div class="scrolling" [ngStyle]="{width: scrollWidth}">
+                <app-destination *ngFor="let c of cities" [city]="c" style="display: inline-flex; margin: 15px; width: 310px;">
+                </app-destination>
+            </div>  
         </div>
-    </div>
+        <router-outlet></router-outlet>
 </body>
 
