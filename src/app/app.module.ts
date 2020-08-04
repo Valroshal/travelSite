@@ -7,6 +7,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { DestinationComponent } from './destination/destination.component';
 import { AllCitiesComponent } from './all-cities/all-cities.component';
 import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AboutComponent } from './about/about.component';
     MenuBarComponent,
     DestinationComponent,
     AllCitiesComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

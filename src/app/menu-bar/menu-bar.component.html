@@ -24,7 +24,7 @@
                         <ul id="open_list" class="list__ul2" [ngStyle]="{display:list2.opacity===0.55 ? 'none' : 'flex'}">
                             <a routerLink="/about" routerLinkActive="active">About</a>
                             <a routerLink="">Contacts</a>
-                            <a routerLink="/menu-bar">Home</a>
+                            <a routerLink="/app-home">Home</a>
                         </ul>
                     </div>
 
@@ -53,41 +53,8 @@
 
             </div>
             <hr style="margin-top: -17px;">
-        </div>
-
-        <div class="container" style="margin-top: 50px; margin-left: 150px;">
-
-            <label for="title" style="display: block;"><h2>{{title}}</h2></label>
-            <div class="list " style="position:relative;">
-                <div style=" display: flex; align-items: flex-end;">
-                    <span class="placeholder " [ngStyle]="{opacity: list1.opacity}" (click)="changeStyle(list1)">Popular</span>
-                    <span class="arrow-down" (click)="changeStyle(list1)"></span>
-                </div>
-                <ul id="open_list" class="list__ul" [ngStyle]="{display:list1.opacity===0.55 ? 'none' : 'flex'}">
-                    <li *ngFor="let j of travelOptions" value="{{j}}">
-                        <a href="">{{j}}</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <hr style="margin-top: 120px;">
-
-        <div class="container-2">
-            <!-- <div class="featured" style="display:flex; justify-content:space-between; "> -->
-            <h4 style="opacity: 0.55; margin-left: 27px; line-height: 1.8;">Featured</h4>
-            <a [routerLink]="['allcities']" [fragment]="'b'" class="button">
-                <!-- <a [routerLink]="['allcities']" class="button">  -->
-                <div class="button-text">
-                    <h5 class="txt">See All</h5>
-                    <i class="arrow right"></i>
-                </div>
-            </a>
-            <!-- </div> -->
-        </div>
-
-    </div>
-
-    <router-outlet></router-outlet>
+        </div> 
+        </div> 
 </body>
 <!-- What I want to change: 
  1. search icon open the wide field
