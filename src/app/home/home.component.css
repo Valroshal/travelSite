@@ -1,3 +1,7 @@
+body{
+    background: url(/assets/icons/background.jpg) no-repeat center top /cover;
+}
+
 .menu-icon {
     display: inline-block;
     margin: 15px;
@@ -303,6 +307,5 @@ a.button {
     background-color: white;
     border-radius: 15px;
 }
-
 
 /* scrollbar for mozilla */

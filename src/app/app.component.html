@@ -2,16 +2,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <app-menu-bar></app-menu-bar> 
-    <router-outlet></router-outlet>
-        <!-- <app-home></app-home> -->
-        <!-- <div class="container">
-            <div class="scrolling" [ngStyle]="{width: scrollWidth}">
-                <app-destination *ngFor="let c of cities" [city]="c" style="display: inline-flex; margin: 15px; width: 310px;">
-                </app-destination>
-            </div>  
-        </div> -->
-    
-    
+    <div class="menu">
+        <app-menu-bar></app-menu-bar> 
+    </div>
+    <div class="tabs">
+        <router-outlet></router-outlet> 
+    </div>
 </body>
 

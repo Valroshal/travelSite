@@ -3,8 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-    
+<!-- <body style="background: url(/assets/icons/background.jpg) no-repeat center top /cover;"> -->
+<body [ngClass]="{'imageBackground': color, 'blackBackground': !color}">   
     <!-- menu and icon -->
     <div id="menu-block" style="color:'white'">
         <div id="head" class="bar  container">
@@ -19,12 +19,12 @@
 
                     <div class="list " style="position:relative;">
                         <div style=" display: flex; align-items: flex-end;">
-                            <span class="placeholder2" (click)="changeStyle(list2)">Menu</span>
+                            <span class="placeholder2" style="opacity: 0.55;" (click)="changeStyle(list2)">Menu</span>
                         </div>
                         <ul id="open_list" class="list__ul2" [ngStyle]="{display:list2.opacity===0.55 ? 'none' : 'flex'}">
-                            <a routerLink="/about" routerLinkActive="active">About</a>
-                            <a routerLink="">Contacts</a>
-                            <a routerLink="/app-home">Home</a>
+                            <a routerLink="/app-home" routerLinkActive="active" (click)="changeColor('home')">Home</a>
+                            <a routerLink="/about" routerLinkActive="active" (click)="changeColor('about')">About</a>
+                            <a routerLink="/app-contacts" routerLinkActive="active" (click)="changeColor('contacts')">Contacts</a>
                         </ul>
                     </div>
 
@@ -56,8 +56,10 @@
         </div> 
         </div> 
 </body>
+
+
 <!-- What I want to change: 
  1. search icon open the wide field
- 2. the height of the page opens scroll in the little desktop
- 3. link to about and contacts pages
- 4. link in see all to another page-->
+ 2. the height of the page opens scroll in the little desktop 
+    when set 100vh it makes the component 100 so there is a scroll too
+ 3. link in see all to another page-->

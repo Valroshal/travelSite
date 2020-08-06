@@ -38,6 +38,18 @@ listItem = [{
 
   toggle : any = false;
 
+  color = true;
+
+  changeColor(tab)
+  {
+    console.log('color: ' + this.color);
+    if(tab == 'about' || tab == 'contacts')
+      this.color = false;
+    else if (tab == 'home')
+      this.color = true;
+    
+  }
+
   retToggle(){
     console.log('toggle: ' + this.toggle);
     this.toggle=!this.toggle;
@@ -61,6 +73,8 @@ listItem = [{
      
     console.log(list.opacity);    
   }
+
+ 
 
   constructor() { }
 

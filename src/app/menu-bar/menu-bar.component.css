@@ -1,9 +1,18 @@
+.blackBackground{
+    background: black;
+}
+
+.imageBackground{
+    background: url(/assets/icons/background.jpg) no-repeat center top /cover;
+}
+
 .menu-icon {
     display: inline-block;
     margin: 15px;
     margin-top: 2px;
     vertical-align: middle;
     height: auto;
+    opacity: 0.55;
 }
 
 #menuIcon1 {
@@ -33,6 +42,7 @@
 .menu-list {
     margin-top: 15px;
     display: flex;
+    opacity: 0.55;
 }
 
 .menu-list li {
@@ -50,6 +60,7 @@
     margin-top: 15px;
     display: flex;
     max-width: 550px;
+    opacity: 0.55;
 }
 
 .hidden-search-block {
@@ -150,6 +161,7 @@ h2 {
     padding: 10px;
     background-color: none;
     font-size: 22px;
+    
 }
 
 a {
@@ -242,7 +254,7 @@ a.button {
     }
     #head {
         color: white;
-        opacity: 0.55;
+        /* opacity: 0.55; */
         max-width: 1960px;
         height: auto;
     }

@@ -3,7 +3,14 @@ body {
   /* width: 100%;
   height: 100%; */
   margin: 0;
+  /* background: url(/assets/icons/background.jpg) no-repeat center top /cover; */
 }
+
+
+body.black {
+    background-color: black !important;
+  }
+
 
 .container-app {
     max-width: 93%;
