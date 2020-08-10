@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     const citiesObservable = this.httpClient.get<City[]>(this.citiesUrl);
     return citiesObservable;
   }
-  
+
   scrollWidth = this.cities.length *350 + "px";
 
 
@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
     const citiesObservable = this.getCities();
     citiesObservable.subscribe((citiesData: City[]) => {
       this.cities = citiesData;
+      console.log(this.cities);
     })
   }
 
@@ -76,7 +77,7 @@ export class HomeComponent implements OnInit {
 }
 
 
-// cities: City[] = [
+  // cities: City[] = [
   //   {
   //     name: "New York",
   //     img: 'assets/icons/NY.jpg',

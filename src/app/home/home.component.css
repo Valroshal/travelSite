@@ -1,5 +1,6 @@
 body{
     background: url(/assets/icons/background.jpg) no-repeat center top /cover;
+    height: 100%;
 }
 
 .menu-icon {
@@ -42,7 +43,7 @@ body{
 .menu-list li {
     list-style-type: none;
     margin-left: 60px;
-    height: 100px;
+    height: 15vh;
     width: 125px;
 }
 
@@ -254,6 +255,7 @@ a.button {
         max-width: 90%;
         display: flex;
         justify-content: space-between;
+        height: 15vh;
     }
     hr {
         border-color: white;
@@ -289,6 +291,9 @@ a.button {
     height: 1px;
 }
 
+.scrolling{
+    display: flex;
+}
 
 /* scrollbar for chrome */
 

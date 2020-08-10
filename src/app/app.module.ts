@@ -27,6 +27,8 @@ import { DataServiceService } from './api/data-service.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    
+    //remove this when real API will be ready
     HttpClientInMemoryWebApiModule.forRoot(
       DataServiceService, {dataEncapsulation: false}
     )
