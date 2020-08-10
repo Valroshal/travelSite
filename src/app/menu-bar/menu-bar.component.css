@@ -1,9 +1,13 @@
 .blackBackground{
-    background: black;
+    /* background: black; */
+    /* background: rgb(236, 87, 87); */
+    background: rgb(51, 49, 49);
+    
 }
 
 .imageBackground{
     background: url(/assets/icons/background.jpg) no-repeat center top /cover;
+    /* background: gold; */
 }
 
 .menu-icon {

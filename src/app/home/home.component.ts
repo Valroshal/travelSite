@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export interface City{
   name: string;
@@ -18,99 +20,14 @@ export interface City{
 })
 export class HomeComponent implements OnInit {
 
-  cities: City[] = [
-    {
-      name: "New York",
-      img: 'assets/icons/NY.jpg',
-      amount: '967$',
-      km: '257km away', //get from site, with some function
-      celsius: 26, //get from site, with some function
-      weather: 'bolt', //get from site, with some function
-      like: '4k',
-      message: 400
-    },
-    {
-      name: "New York",
-      img: 'assets/icons/NY.jpg',
-      amount: '967$',
-      km: '257km away', //get from site, with some function
-      celsius: 26, //get from site, with some function
-      weather: 'bolt', //get from site, with some function
-      like: '4k',
-      message: 400
-    },
-    {
-      name: "New York",
-      img: 'assets/icons/NY.jpg',
-      amount: '967$',
-      km: '257km away', //get from site, with some function
-      celsius: 26, //get from site, with some function
-      weather: 'bolt', //get from site, with some function
-      like: '4k',
-      message: 400
-    },
-    {
-      name: "New York",
-      img: 'assets/icons/NY.jpg',
-      amount: '967$',
-      km: '257km away', //get from site, with some function
-      celsius: 26, //get from site, with some function
-      weather: 'bolt', //get from site, with some function
-      like: '4k',
-      message: 400
-    },
-    {
-      name: "New York",
-      img: 'assets/icons/NY.jpg',
-      amount: '967$',
-      km: '257km away', //get from site, with some function
-      celsius: 26, //get from site, with some function
-      weather: 'bolt', //get from site, with some function
-      like: '4k',
-      message: 400
-    },
-    {
-      name: "New York",
-      img: 'assets/icons/NY.jpg',
-      amount: '967$',
-      km: '257km away', //get from site, with some function
-      celsius: 26, //get from site, with some function
-      weather: 'bolt', //get from site, with some function
-      like: '4k',
-      message: 400
-    },
-    {
-      name: "New York",
-      img: 'assets/icons/NY.jpg',
-      amount: '967$',
-      km: '257km away', //get from site, with some function
-      celsius: 26, //get from site, with some function
-      weather: 'bolt', //get from site, with some function
-      like: '4k',
-      message: 400
-    },
-    {
-      name: "New York",
-      img: 'assets/icons/NY.jpg',
-      amount: '967$',
-      km: '257km away', //get from site, with some function
-      celsius: 26, //get from site, with some function
-      weather: 'bolt', //get from site, with some function
-      like: '4k',
-      message: 400
-    }
-  ];
-  // city ={
-  //   name: "New York",
-  //   img: 'assets/icons/NY.jpg',
-  //   amount: '967$',
-  //   km: '257km away', //get from site, with some function
-  //   celsius: 26, //get from site, with some function
-  //   weather: 'bolt', //get from site, with some function
-  //   like: '4k',
-  //   message: 400
-  // }
+  private citiesUrl = 'api/citiesArray'
+  cities: City[] = [];
 
+  public getCities(): Observable<Array<City>>{
+    const citiesObservable = this.httpClient.get<City[]>(this.citiesUrl);
+    return citiesObservable;
+  }
+  
   scrollWidth = this.cities.length *350 + "px";
 
 
@@ -145,10 +62,99 @@ export class HomeComponent implements OnInit {
     console.log(list.opacity);    
   }
 
-  constructor() { }
+  constructor( private httpClient: HttpClient) { }
 
+  
   ngOnInit(): void {
+    const citiesObservable = this.getCities();
+    citiesObservable.subscribe((citiesData: City[]) => {
+      this.cities = citiesData;
+    })
   }
 
 
 }
+
+
+// cities: City[] = [
+  //   {
+  //     name: "New York",
+  //     img: 'assets/icons/NY.jpg',
+  //     amount: '967$',
+  //     km: '257km away', //get from site, with some function
+  //     celsius: 26, //get from site, with some function
+  //     weather: 'bolt', //get from site, with some function
+  //     like: '4k',
+  //     message: 400
+  //   },
+  //   {
+  //     name: "New York",
+  //     img: 'assets/icons/NY.jpg',
+  //     amount: '967$',
+  //     km: '257km away', //get from site, with some function
+  //     celsius: 26, //get from site, with some function
+  //     weather: 'bolt', //get from site, with some function
+  //     like: '4k',
+  //     message: 400
+  //   },
+  //   {
+  //     name: "New York",
+  //     img: 'assets/icons/NY.jpg',
+  //     amount: '967$',
+  //     km: '257km away', //get from site, with some function
+  //     celsius: 26, //get from site, with some function
+  //     weather: 'bolt', //get from site, with some function
+  //     like: '4k',
+  //     message: 400
+  //   },
+  //   {
+  //     name: "New York",
+  //     img: 'assets/icons/NY.jpg',
+  //     amount: '967$',
+  //     km: '257km away', //get from site, with some function
+  //     celsius: 26, //get from site, with some function
+  //     weather: 'bolt', //get from site, with some function
+  //     like: '4k',
+  //     message: 400
+  //   },
+  //   {
+  //     name: "New York",
+  //     img: 'assets/icons/NY.jpg',
+  //     amount: '967$',
+  //     km: '257km away', //get from site, with some function
+  //     celsius: 26, //get from site, with some function
+  //     weather: 'bolt', //get from site, with some function
+  //     like: '4k',
+  //     message: 400
+  //   },
+  //   {
+  //     name: "New York",
+  //     img: 'assets/icons/NY.jpg',
+  //     amount: '967$',
+  //     km: '257km away', //get from site, with some function
+  //     celsius: 26, //get from site, with some function
+  //     weather: 'bolt', //get from site, with some function
+  //     like: '4k',
+  //     message: 400
+  //   },
+  //   {
+  //     name: "New York",
+  //     img: 'assets/icons/NY.jpg',
+  //     amount: '967$',
+  //     km: '257km away', //get from site, with some function
+  //     celsius: 26, //get from site, with some function
+  //     weather: 'bolt', //get from site, with some function
+  //     like: '4k',
+  //     message: 400
+  //   },
+  //   {
+  //     name: "New York",
+  //     img: 'assets/icons/NY.jpg',
+  //     amount: '967$',
+  //     km: '257km away', //get from site, with some function
+  //     celsius: 26, //get from site, with some function
+  //     weather: 'bolt', //get from site, with some function
+  //     like: '4k',
+  //     message: 400
+  //   }
+  // ];

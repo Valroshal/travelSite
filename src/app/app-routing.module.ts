@@ -31,6 +31,7 @@ const routes: Routes =[
   { path: 'app-home', component: HomeComponent, data:{ bodyClass: 'pink'} },
   { path: 'app-contacts', component: ContactsComponent },
   { path: 'about', component: AboutComponent, data:{ bodyClass: 'black'} },
+  { path: 'app-home/app-all-cities', component: AllCitiesComponent},
 ];
 
 @NgModule({

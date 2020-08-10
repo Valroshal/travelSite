@@ -7,22 +7,52 @@ body {
   }
 
 .container{
+    
     margin-top: -20px;
     background-color: black;
     background-size: auto;
     height: 100vh; 
-    
+    position: relative;
+    top: 30px;
 
+}
+
+.box{
+    height: 60vh;
+    opacity: 40%;
+    background-color: rgb(107, 106, 106);
+    position: absolute;
+    width: 25vw;
+    top: 40px; 
+    border-radius: 20px;
 }
 
 .content{
     display: flex;
-    flex-direction: row;
-    /* justify-content: space-around; */
+    flex-direction: column;
+    color: rgba(234, 240, 240, 0.876);
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    z-index: 10;
+    line-height: 300%;
 }
 
-.text {
-    font-size: 200%;
-    color: azure;
-    padding: 45px;
+.line{
+    display: flex;
+    flex-direction: row;
+}
+.fa {
+    padding-top: 2px;
+}
+
+p{
+    padding-left: 40px;
+    color: rgb(236, 87, 87) !important;
+    opacity: 0.7;
+}
+
+h5{
+    padding-left: 10px;
+    font-size: 24px;
 }

@@ -9,7 +9,9 @@ import { AllCitiesComponent } from './all-cities/all-cities.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
-
+import { HttpClientModule} from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { DataServiceService } from './api/data-service.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,11 @@ import { ContactsComponent } from './contacts/contacts.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      DataServiceService, {dataEncapsulation: false}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

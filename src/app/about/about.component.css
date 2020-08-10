@@ -11,14 +11,29 @@ body {
     background-color: black;
     background-size: auto;
     height: 100vh; 
-    
+    position: relative;
+    top: 10px;
 
+}
+.back{
+    height: 75vh;
+    opacity: 40%;
+    background-color: rgb(107, 106, 106);
+    position: absolute;
+    width: 65vw;
+    top: 40px;
+    left: 50px;
+    border-radius: 20px;
 }
 
 .content{
     display: flex;
     flex-direction: row;
     /* justify-content: space-around; */
+    position: absolute;
+    z-index: 10;
+    left: 100px;
+    top: 20px;
 }
 
 .text {
@@ -26,3 +41,4 @@ body {
     color: azure;
     padding: 45px;
 }
+
