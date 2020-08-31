@@ -24,9 +24,6 @@ router.post('/add', async (req, res) => {
     try {
       const city = new CityModel(cityData);
       const valid = await city.validate();
-      if (!valid) {
-        res.status(400).json({error: "Error saving city"});
-      }
       const saved = await city.save();
       console.log("City saved successfully:", saved);
       res.json(saved);
