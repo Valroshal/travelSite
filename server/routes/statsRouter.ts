@@ -6,24 +6,42 @@ const router = expressR.Router();
 // const validateRegisterInput = require('../../validation/register');
 // const validateLoginInput = require('../../validation/login');
 // Load User model
-const citiesDb = require('../models/statsModel/dbModel');
+const CityModel = require('../models/statsModel/CityModel');
 // const key = require('../../config');
 
 //Handling router requests
 // @route          GET api/users//
 // @description    Tests users route
 // @access         Public
-router.get('/', (req, res) =>
-	res.json({
-		msg: 'Cities works',
-	})
+router.get('/', async (req, res) => {
+  const cities = await CityModel.find();
+  res.json(cities);
+});
+
+router.post('/add', async (req, res) => {
+    const cityData = req.body;
+
+    try {
+      const city = new CityModel(cityData);
+      const valid = await city.validate();
+      if (!valid) {
+        res.status(400).json({error: "Error saving city"});
+      }
+      const saved = await city.save();
+      console.log("City saved successfully:", saved);
+      res.json(saved);
+    } catch (e) {
+      console.error("Error saving city", e);
+      res.status(400).json({msg: "Error saving city", error: e});
+    }
+  }
 );
 
 // @route          POST api/users/register
 // @description    Register user
 // @access         Public
 // router.post('/register', (req, res) => {
-	
+
 // 	//looking for a record that has the email that the user is trying to register with
 // 	citiesDb.findOne({ name: "haifa" }).then(city => {
 // 		//there is a user with that email
@@ -57,12 +75,6 @@ router.get('/', (req, res) =>
 // 		}
 // 	});
 // });
-
-
-
-
-
-
 
 
 module.exports = router;

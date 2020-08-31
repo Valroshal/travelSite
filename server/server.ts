@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 //to get from the body data
 const bodyParser = require('body-parser');
 //import the routs
-const cities = require('./routes/statsRouter.ts');
+const citiesRouter = require('./routes/statsRouter.ts');
 
 //Set up and create express app
 const app = express();
@@ -26,9 +26,9 @@ mongoose
 	})
 	//if it's not been connected
   .catch(err => console.log(err));
-  
+
 //Use Routes - Initilaze routes
-app.use('/api/cities', cities); //////////////////////////////////////////////////////////////////////////
+app.use('/api/cities', citiesRouter); //////////////////////////////////////////////////////////////////////////
 
 //Listen for requests from port
 const port = process.env.PORT || 5000;
