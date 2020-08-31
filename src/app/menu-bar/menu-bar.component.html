@@ -45,7 +45,7 @@
                             <img src="assets/icons/search.png" alt="" >
                         </div>
                     </label>
-                    <input type="text" class="show-search-block" *ngIf="toggle==true; else hideSearch">
+                    <input type="text" id="search-input" class="show-search-block" *ngIf="toggle==true; else hideSearch">
                     <ng-template #hideSearch>
                         <div class="hidden-search-block"></div>
                     </ng-template>

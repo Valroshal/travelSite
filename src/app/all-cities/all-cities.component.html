@@ -8,7 +8,11 @@
                     <p style='font-size: 36px;'>Featured</p>
                     <p style='font-size: 16px;'>spots</p>
                 </div>
-                <button></button>
-            </div>
+                <button class="filters">+ filters</button>
+            </div> 
+            <div class="cont">
+                <app-place-in-cities class="places" *ngFor="let c of cities" [city]="c" >
+                </app-place-in-cities> 
+            </div>  
         </div>
     </body>

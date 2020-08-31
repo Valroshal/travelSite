@@ -18,15 +18,48 @@ body{
 .featured{
     color: azure;
     position: absolute;
-    top: 50px;
+    
     left: 100px;
     
 }
 
 .up-bar{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
     position: absolute;
+    top: 50px;
 }
 
+.filters{
+    position: absolute;
+    
+    left: 1200px;
+}
+
+.cont{
+    position: absolute;
+    top: 180px;
+}
+
+button {
+    background-color: rgba(253, 40, 86, 0.924);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 130px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+/* CREATE a table with two columns of places */
+/* style="display: inline-flex; margin: 15px; width: 310px;" */
+.places{ 
+    /* display: inline-flex; */
+    margin: 15px;
+    width: 310px; 
+    display: grid;
+    grid-auto-flow: column;
+}

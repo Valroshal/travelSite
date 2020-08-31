@@ -1,11 +1,4 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-// import {RouterModule} from '@angular/router';
-// import { AllCitiesComponent } from '../all-cities/all-cities.component';
-
-// const routes=[
-//   {
-//   path:'item', component:AllCitiesComponent
-// }]
 
 @Component({
   selector: 'app-menu-bar',
@@ -43,7 +36,7 @@ listItem = [{
   changeColor(tab)
   {
     console.log('color: ' + this.color);
-    if(tab == 'about' || tab == 'contacts')
+    if(tab == 'about' || tab == 'contacts' || tab == 'all-cities')
       this.color = false;
     else if (tab == 'home')
       this.color = true;

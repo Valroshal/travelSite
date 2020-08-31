@@ -12,6 +12,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HttpClientModule} from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataServiceService } from './api/data-service.service';
+import { PlaceInCitiesComponent } from './place-in-cities/place-in-cities.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DataServiceService } from './api/data-service.service';
     AllCitiesComponent,
     AboutComponent,
     HomeComponent,
-    ContactsComponent
+    ContactsComponent,
+    PlaceInCitiesComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +31,9 @@ import { DataServiceService } from './api/data-service.service';
     HttpClientModule,
     
     //remove this when real API will be ready
-    HttpClientInMemoryWebApiModule.forRoot(
-      DataServiceService, {dataEncapsulation: false}
-    )
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   DataServiceService, {dataEncapsulation: false}
+    //)
   ],
   providers: [],
   bootstrap: [AppComponent]

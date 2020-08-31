@@ -8,30 +8,10 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { AppComponent } from './app.component';
 //const routes: Routes = []; // sets up routes constant where you define your routes
 const routes: Routes =[
-  // {path: 'app',
-  // component: AppComponent,
-  //   children:[
-  //     {
-  //       path: '', 
-  //       redirectTo: '/app/all-cities', //full child path
-  //       pathMatch: 'full'
-  //     },
-  //     {path:'app-all-cities', component:AppComponent},
-
-  //     {
-  //       path: '', 
-  //       redirectTo: '/about', //full child path
-  //       pathMatch: 'full'
-  //     },
-  //     {path:'about', component:AboutComponent},
-  //   ]    
-  // }
-  // { path: '', redirectTo: '/about', pathMatch: 'full' },
-
   { path: 'app-home', component: HomeComponent, data:{ bodyClass: 'pink'} },
   { path: 'app-contacts', component: ContactsComponent },
   { path: 'about', component: AboutComponent, data:{ bodyClass: 'black'} },
-  { path: 'app-home/app-all-cities', component: AllCitiesComponent},
+  { path: 'app-home/app-all-cities', component: AllCitiesComponent,  data:{ bodyClass: 'black'}},
 ];
 
 @NgModule({
